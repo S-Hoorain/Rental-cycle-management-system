@@ -1,0 +1,11 @@
+StationID,Location,AvailableBikes,TotalDocks,Latitude,Longitude
+1,Saddar,8,20,24.8536,67.0290
+2,Clifton Block 2,12,25,24.8125,67.0302
+3,Gulshan-e-Iqbal,10,18,24.9239,67.0871
+4,North Nazimabad,7,15,24.9387,67.0354
+5,DHA Phase 6,9,22,24.8121,67.0885
+6,Shahrah-e-Faisal,5,17,24.8715,67.0631
+7,Liaquatabad,4,14,24.9105,67.0484
+8,University Road,11,23,24.9334,67.1143
+9,Sea View,6,19,24.8011,67.0344
+10,M.A. Jinnah Road,3,16,24.8614,67.0136

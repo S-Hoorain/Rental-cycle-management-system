@@ -25,6 +25,18 @@ void BikeStationMinHeap::heapify(int index) {
     }
 }
 
+bool BikeStationMinHeap::updateBikes(int stationId, int delta) {
+    for (int i = 0; i < heap.size(); ++i) {
+        if (heap[i].stationId == stationId) {
+            heap[i].availableBikes += delta;
+            heapify(i);
+            bubbleUp(i);
+            return true;
+        }
+    }
+    return false;
+}
+
 void BikeStationMinHeap::bubbleUp(int index) {
     while (index > 0) {
         int parent = (index - 1) / 2;

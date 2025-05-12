@@ -14,6 +14,7 @@ private:
     void swap(int i, int j);
 
 public:
+    bool updateBikes(int stationId, int delta);
     void insert(const BikeStation& station);
     void deleteStation(int stationId);
     BikeStation getMin() const;

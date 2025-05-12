@@ -7,6 +7,19 @@ void BikeStationHeap::swap(int i, int j) {
     heap[j] = temp;
 }
 
+bool BikeStationHeap::updateBikes(int stationId, int delta) {
+    for (int i = 0; i < heap.size(); ++i) {
+        if (heap[i].stationId == stationId) {
+            heap[i].availableBikes += delta;
+            // Fix heap after update
+            heapify(i);
+            bubbleUp(i);
+            return true;
+        }
+    }
+    return false; // Station not found
+}
+
 void BikeStationHeap::heapify(int index) {
     int size = heap.size();
     int largest = index;

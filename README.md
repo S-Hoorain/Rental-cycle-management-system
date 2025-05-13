@@ -53,10 +53,10 @@ RENTAL-CYCLE-MANAGEMENT-SYSTEM-MAIN/
 │ ├── UserDatabse.cpp / .hpp # User DB integration  
 │ └── main.cpp # Main menu
 │  
-├── shortest_ath.png # Graph that regenerates every time we use shortest path algorithm.  
 ├── Automated-Rental-Cycle-Management-System.pdf  
+├── README.md # Project documentation  
 ├── rental_system.exe # File to execute the project  
-└── README.md # Project documentation  
+└── shortest_path.png # Graph that regenerates every time we use shortest path algorithm.  
 
 
 ## ⚙️ How to Compile & Run

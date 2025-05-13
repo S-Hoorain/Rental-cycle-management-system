@@ -4,10 +4,24 @@
 #include "MinHeap.hpp"
 #include "hashtable.hpp"
 #include "graph.hpp"
+#include "pbPlots.hpp"
+#include "supportLib.hpp"
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+string getLocation(const vector<BikeStationEntry> &stations, const string &prompt) {
+    // cout << prompt << endl;
+    int j = stations.size(), index;
+    for(int i = 0; i < j; ++i) cout << i << ": " << stations[i].Location << endl;
+    cout << prompt;
+    cin >> index;
+    while (! (index >= 0 && index < j)) {
+        cout << "Invalid input. Try again: ";   cin >> index;
+    }
+    return stations[index].Location;
+}
 
 int main() {
     // Initialize system
@@ -45,10 +59,12 @@ int main() {
 
         if (choice == 1) {
             string currentLoc, destLoc;
-            cout << "Enter your current location: ";
-            getline(cin, currentLoc);
-            cout << "Enter your destination location: ";
-            getline(cin, destLoc);
+            // cout << "Enter your current location: ";
+            // getline(cin, currentLoc);
+            // cout << "Enter your destination location: ";
+            // getline(cin, destLoc);
+            currentLoc = getLocation(bikeStation.stations, "Enter your current location: ");
+            destLoc = getLocation(bikeStation.stations, "Enter your destination: ");
 
             BikeStationEntry* source = nullptr;
             BikeStationEntry* dest = nullptr;
@@ -68,6 +84,17 @@ int main() {
                 cout << "❌ No path found between the locations.\n";
                 continue;
             }
+
+            StringReference *err = CreateStringReferenceLengthValue(0, L' ');
+            RGBABitmapImageReference *img = CreateRGBABitmapImageReference();
+            vector<double> X, Y;
+            for (BikeStationEntry bs: path) {
+                X.push_back(bs.Latitude);   Y.push_back(bs.Longitude);
+            }
+            DrawScatterPlot(img, 600, 400, &X, &Y, err);
+            vector<double> *plot = ConvertToPNG(img->image);
+            WriteToFile(plot, "shortest_path.png");
+            DeleteImage(img->image);
 
             BikeStationHeap pickupHeap;
             BikeStationMinHeap dropHeap;

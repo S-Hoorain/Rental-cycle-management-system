@@ -37,7 +37,7 @@ pair<GNode, double> GraphPriorityQueue::pop() {
     for (int i = 1; i < size; ++i) {
         if (priority[i] < priority[min]) min = i;
     }
-    int last = (-1)%size;
+    int last = size - 1;
     GNode d = data[last];
     data[last] = data[min];
     data[min] = d;
@@ -164,7 +164,7 @@ vector<BikeStationEntry> Graph::shortestPath(BikeStationEntry source, BikeStatio
                 continue;
             }
             double newDist = currentDist + edge.weight;
-            if (newDist < distances[neighborIndex]) {
+            if (newDist <= distances[neighborIndex]) {
                 distances[neighborIndex] = newDist;
                 previous[neighborIndex] = currentNodeIndex;
                 queue.push(neighbor, newDist);

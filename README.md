@@ -61,7 +61,7 @@ RENTAL-CYCLE-MANAGEMENT-SYSTEM-MAIN/
 
 ## ⚙️ How to Compile & Run
 
-g++ -std=c++17 -o rental_system src/*.cpp
+g++ -std=c++17 -o rental_system src/*.cpp  
 ./rental_system
 
 

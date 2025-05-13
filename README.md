@@ -40,7 +40,7 @@ RENTAL-CYCLE-MANAGEMENT-SYSTEM-MAIN/
 │ ├── Bikestations.csv # Station dataset  
 │ └── Userdata.csv # User dataset  
 │  
-├── output/ # Output folder (e.g., logs or results)  
+├── output/ # Output folder (Not implemented yet)  
 │  
 ├── src/ # Source code files  
 │ ├── BikeStation.cpp / .hpp # Bike station struct  
@@ -51,9 +51,12 @@ RENTAL-CYCLE-MANAGEMENT-SYSTEM-MAIN/
 │ ├── pbPlots.cpp / .hpp # Plotting library (if used)  
 │ ├── supportLib.cpp / .hpp # Graph plotting helpers  
 │ ├── UserDatabse.cpp / .hpp # User DB integration  
-│ └── main.cpp # Main CLI entry point  
+│ └── main.cpp # Main menu
 │  
 ├── .vscode/ # VS Code config  
+├── shortest_ath.png # Graph that regenerates every time we use shortest path algorithm.  
+├── Automated-Rental-Cycle-Management-System.pdf  
+├── rental_system.exe # File to execute the project  
 └── README.md # Project documentation  
 
 

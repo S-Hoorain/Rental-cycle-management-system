@@ -51,7 +51,7 @@ RENTAL-CYCLE-MANAGEMENT-SYSTEM-MAIN/
 │ ├── pbPlots.cpp / .hpp # Plotting library (if used)  
 │ ├── supportLib.cpp / .hpp # Graph plotting helpers  
 │ ├── UserDatabse.cpp / .hpp # User DB integration  
-│ └── main.cpp # Main menu
+│ └── main.cpp # Main menu  
 │  
 ├── Automated-Rental-Cycle-Management-System.pdf  
 ├── README.md # Project documentation  

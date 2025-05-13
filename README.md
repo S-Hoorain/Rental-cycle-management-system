@@ -35,26 +35,26 @@ Simulate a rental cycle network with efficient data management and real-time dec
 
 ## 📁 Project Structure
 
-RENTAL-CYCLE-MANAGEMENT-SYSTEM-MAIN/
-├── input/ # Input data files
-│ ├── Bikestations.csv # Station dataset
-│ └── Userdata.csv # User dataset
-│
-├── output/ # Output folder (e.g., logs or results)
-│
-├── src/ # Source code files
-│ ├── BikeStation.cpp / .hpp # Bike station struct
-│ ├── graph.cpp / .hpp # Dijkstra's algorithm
-│ ├── hashtable.cpp / .hpp # User hashmap
-│ ├── MaxHeap.cpp / .hpp # Max heap logic
-│ ├── MinHeap.cpp / .hpp # (if used) Min heap logic
-│ ├── pbPlots.cpp / .hpp # Plotting library (if used)
-│ ├── supportLib.cpp / .hpp # Graph plotting helpers
-│ ├── UserDatabse.cpp / .hpp # User DB integration
-│ └── main.cpp # Main CLI entry point
-│
-├── .vscode/ # VS Code config
-└── README.md # Project documentation
+RENTAL-CYCLE-MANAGEMENT-SYSTEM-MAIN/  
+├── input/ # Input data files  
+│ ├── Bikestations.csv # Station dataset  
+│ └── Userdata.csv # User dataset  
+│  
+├── output/ # Output folder (e.g., logs or results)  
+│  
+├── src/ # Source code files  
+│ ├── BikeStation.cpp / .hpp # Bike station struct  
+│ ├── graph.cpp / .hpp # Dijkstra's algorithm  
+│ ├── hashtable.cpp / .hpp # User hashmap  
+│ ├── MaxHeap.cpp / .hpp # Max heap logic  
+│ ├── MinHeap.cpp / .hpp # (if used) Min heap logic  
+│ ├── pbPlots.cpp / .hpp # Plotting library (if used)  
+│ ├── supportLib.cpp / .hpp # Graph plotting helpers  
+│ ├── UserDatabse.cpp / .hpp # User DB integration  
+│ └── main.cpp # Main CLI entry point  
+│  
+├── .vscode/ # VS Code config  
+└── README.md # Project documentation  
 
 
 ## ⚙️ How to Compile & Run

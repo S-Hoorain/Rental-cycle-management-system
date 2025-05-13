@@ -51,7 +51,8 @@ int main() {
         cout << "1. Find optimized pickup/drop-off stations\n";
         cout << "2. View all stations\n";
         cout << "3. Create new user account\n";
-        cout << "4. Exit\n";
+        cout << "4. Update phone number\n";
+        cout << "5. Exit\n";
         cout << "Enter choice: ";
         int choice;
         cin >> choice;
@@ -185,6 +186,43 @@ int main() {
         }
 
         else if (choice == 4) {
+            int id;
+            string CNIC;
+            cout << "\nEnter your ID: ";
+            cin >> id;
+            cout << "Enter your CNIC: ";
+            cin >> CNIC;
+
+            if (id < 0 || id >= userTable.getSize()) {
+                cout << "❌ Invalid ID entered.\n";
+                continue;
+            }
+
+            if (userTable.getIDAt(id) == -1) {
+                cout << "❌ No user found with this ID.\n";
+                continue;
+            }
+
+            User user = userTable.getUserAt(id);
+            if (user.CNIC != CNIC) {
+                cout << "❌ CNIC does not match the given ID.\n";
+                continue;
+            }
+
+            string newPhone;
+            cout << "Enter your new phone number: ";
+            cin >> newPhone;
+
+            bool success = userTable.update(id, newPhone);
+            if (success) {
+                cout << "✅ Phone number updated successfully.\n";
+            } else {
+                cout << "❌ Failed to update phone number.\n";
+            }
+            
+        }
+
+        else if (choice == 5) {
             cout << "💾 Saving users to file...\n";
             userDB.LoadUsersToCsv("input/Userdata.csv", userTable);
             cout << "👋 Exiting. Goodbye!\n";
